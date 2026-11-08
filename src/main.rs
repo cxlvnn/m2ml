@@ -1,8 +1,9 @@
-use std::env::args;
+use std::env;
 
 fn main() {
-    let arg = args();
-    for a in arg {
-        println!("{a}");
-    }
+    let args: Vec<String> = env::args().collect();
+
+    let file_path = &args[1];
+
+    println!("File: {file_path}");
 }
